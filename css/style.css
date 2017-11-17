@@ -1,0 +1,25 @@
+body {
+	
+}
+
+.content {
+	border: 1px solid black;
+}
+
+.emlSender {
+	border: 1px solid red;
+	height: auto px;
+	width: auto px;
+	padding: 10px;
+	margin: 5px;
+}
+
+
+.emlSender:hover{
+	background-color: lightgrey;
+}
+
+.emlBody {
+	color: pink;
+	display: none;
+}

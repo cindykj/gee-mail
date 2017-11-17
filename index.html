@@ -15,29 +15,15 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 		
-		// var contentDiv = document.getElementsByClass('content');
-        
 
-		// console.log([i]);
 		console.log(window.geemails);
 		// insert for loop here
-		for(var i = 0; i<window.geemails.length; i++){
+		for (var i = 0; i<window.geemails.length; i++){
 			// console.log(window.geemails[i]);
 			console.log(window.geemails[i].sender);
 			console.log(window.geemails[i].subject);
 			console.log(window.geemails[i].date);
 			console.log(window.geemails[i].body);
-
-
-	        // var messageBox = document.createElement('div');
-	        // messageBox.className = 'message';
-	        // messageBox.innerHTML = 'Test Message';
-	        // document.body.appendChild(messageBox);
-
-	        // var senderBox = document.createElement('div');
-	        // senderBox.className = 'emlSender';
-	        // senderBox.innerHTML = geemails[i].sender;
-	        // messageBox.appendChild(senderBox);
 
 	        var senderBox = document.createElement('div');
 	        senderBox.className = 'emlSender';
@@ -59,36 +45,39 @@
 	        bodyBox.innerHTML = geemails[i].body;
 	        senderBox.appendChild(bodyBox);
 
-
-
-
-	        // var subjectBox = document.createElement('div');
-	        // subjectBox.className = 'emlSubject';
-	        // subjectBox.innerHTML = geemails[i].subject;
-	        // messageBox.appendChild('subjectBox');
-
-        // var dateBox = document.createElement('div');
-        // dateBox.className = 'date';
-        // document.messageBox.appendChild('dateBox');
-
-        // var bodyBox = document.createElement('div');
-        // bodyBox.className = 'body';
-        // bodyBox.style.display = 'none';
-        // document.messageBox.appendChild('bodyBox');
-
- 		// var divElem = document.createElement('div');
-		// divElem.className = "content";
-		// document.body.appendChild(divElem);
-
-		// var productBox = document.createElement('div');
-		// productBox.className = "name";
-		// productBox.innerHTML = items[i].product;
-		// divElem.appendChild(productBox);
-
-
 		}
 
-    	};
+		var parentBox = document.getElementsByClassName('emlSender');
+		for (var i = 0; i<parentBox.length; i++){
+			parentBox[i].addEventListener('click', showBody);
+		}
+
+		function showBody(){
+			var bodyContent = this.querySelectorAll('.body')[0];
+			if (bodyContent.style.display === 'none'){
+				bodyContent.style.display = 'block';
+			}else{
+				bodyContent.style.display = "none";
+			}
+			console.log('it works!');
+		}
+
+		// var parentBox= document.getElementsByClassName('emlSender');
+		// for(var i = 0; i<parentBox.length; i++);
+		// 	parentBox[i].addEventListener('click', showBody);
+
+		// function showBody(){
+		// 	var bodyContent = this.querySelectorAll('.body')[0];
+		// 	if(bodyContent.style.display === 'none'){
+		// 		bodyContent.style.display = 'block';
+		// 	}else{
+		// 		bodyContent.style.display = 'none';
+		// 	};
+
+		// 	console.log('itworks!');
+
+ 	};
+ 
 
 
     </script>
