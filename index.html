@@ -1,18 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>gee.mail</title>
+
 <html>
 	<head>
-		<script src="js/mail-generator.js"></script>
+
 		<link href="css/style.css" rel="stylesheet" media="screen">
+		<script src="js/mail-generator.js"></script>
+
     <script>
-      window.onload = function(){
+     window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+		
+		// var contentDiv = document.getElementsByClass('content');
+        
+
+		// console.log([i]);
+		console.log(window.geemails);
+		// insert for loop here
+		for(var i = 0; i<window.geemails.length; i++){
+			// console.log(window.geemails[i]);
+			console.log(window.geemails[i].sender);
+			console.log(window.geemails[i].subject);
+			console.log(window.geemails[i].date);
+			console.log(window.geemails[i].body);
 
 
-     
+	        // var messageBox = document.createElement('div');
+	        // messageBox.className = 'message';
+	        // messageBox.innerHTML = 'Test Message';
+	        // document.body.appendChild(messageBox);
 
-	
+	        // var senderBox = document.createElement('div');
+	        // senderBox.className = 'emlSender';
+	        // senderBox.innerHTML = geemails[i].sender;
+	        // messageBox.appendChild(senderBox);
 
-     	};
+	        var senderBox = document.createElement('div');
+	        senderBox.className = 'emlSender';
+	        senderBox.innerHTML = geemails[i].sender;
+	        document.body.appendChild(senderBox);
+
+	        var subjectBox = document.createElement('div');
+	        subjectBox.className = 'emlSubject';
+	        subjectBox.innerHTML = geemails[i].subject;
+	        senderBox.appendChild(subjectBox);
+
+	        var dateBox = document.createElement('div');
+	        dateBox.className = 'emlDate';
+	        dateBox.innerHTML = geemails[i].date;
+	        senderBox.appendChild(dateBox);
+
+	        var bodyBox = document.createElement('div');
+	        bodyBox.className = 'emlBody';
+	        bodyBox.innerHTML = geemails[i].body;
+	        senderBox.appendChild(bodyBox);
+
+
+
+
+	        // var subjectBox = document.createElement('div');
+	        // subjectBox.className = 'emlSubject';
+	        // subjectBox.innerHTML = geemails[i].subject;
+	        // messageBox.appendChild('subjectBox');
+
+        // var dateBox = document.createElement('div');
+        // dateBox.className = 'date';
+        // document.messageBox.appendChild('dateBox');
+
+        // var bodyBox = document.createElement('div');
+        // bodyBox.className = 'body';
+        // bodyBox.style.display = 'none';
+        // document.messageBox.appendChild('bodyBox');
+
+ 		// var divElem = document.createElement('div');
+		// divElem.className = "content";
+		// document.body.appendChild(divElem);
+
+		// var productBox = document.createElement('div');
+		// productBox.className = "name";
+		// productBox.innerHTML = items[i].product;
+		// divElem.appendChild(productBox);
+
+
+		}
+
+    	};
+
 
     </script>
 	</head>
@@ -22,10 +99,11 @@
 				<h1 id="name">gee.mail</h1>
 					<img id="logo" src="https://images.sftcdn.net/images/t_optimized,f_auto/p/4726ff4a-9b33-11e6-b705-00163ed833e7/1323208810/geemail-logo.png" alt="logo">
 			<div class="content">
-				<nav id="newMail">New Messages</nav>
-		</div>
+				<!-- <nav id="newMail">New Messages</nav> -->
+
+			</div>
 		</div>
 
-		</div>
+		 <script src="js/mail-generator.js"></script>
 	</body>
 </html>
