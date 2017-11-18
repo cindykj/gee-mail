@@ -6,7 +6,7 @@
 
 <html>
 	<head>
-
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet" media="screen">
 		<script src="js/mail-generator.js"></script>
 
@@ -16,8 +16,9 @@
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 		
 
-		console.log(window.geemails);
-		// insert for loop here
+    // Display the data from mail-generator.js
+			// console.log(window.geemails);
+			// insert forloop here
 		for (var i = 0; i<window.geemails.length; i++){
 			// console.log(window.geemails[i]);
 			console.log(window.geemails[i].sender);
@@ -47,13 +48,15 @@
 
 		}
 
+	// Click to show Body
+
 		var parentBox = document.getElementsByClassName('emlSender');
 		for (var i = 0; i<parentBox.length; i++){
 			parentBox[i].addEventListener('click', showBody);
 		}
 
 		function showBody(){
-			var bodyContent = this.querySelectorAll('.body')[0];
+			var bodyContent = this.querySelectorAll('.emlBody')[0];
 			if (bodyContent.style.display === 'none'){
 				bodyContent.style.display = 'block';
 			}else{
@@ -62,19 +65,29 @@
 			console.log('it works!');
 		}
 
-		// var parentBox= document.getElementsByClassName('emlSender');
-		// for(var i = 0; i<parentBox.length; i++);
-		// 	parentBox[i].addEventListener('click', showBody);
+	// Unread emails are BOLDED; when clicked to display body, then the font returns to normal.
 
-		// function showBody(){
-		// 	var bodyContent = this.querySelectorAll('.body')[0];
-		// 	if(bodyContent.style.display === 'none'){
-		// 		bodyContent.style.display = 'block';
-		// 	}else{
-		// 		bodyContent.style.display = 'none';
-		// 	};
+		var readEmail = document.getElementsByClassName('emlSubject');
+		for (var i = 0; i<readEmail .length; i++){
+			readEmail [i].addEventListener('click', unBold);
+		}
 
-		// 	console.log('itworks!');
+		function unBold(){
+			var subjectRead = this.querySelectorAll('.emlSubject')[0];
+			if (readEmail.style.fontWeight === 'bold'){
+				readEmail.style.fontWeight = 'normal';
+			}else{
+				readEmail.style.fontWeight = 'bold';
+			}
+		}
+
+	// Inbox counter
+
+		// var inboxCounter = window.geemails.length;
+		// document.getElementbyId('counter').innerHTML = '(' + inboxCounter + ')';
+
+
+
 
  	};
  
@@ -89,6 +102,8 @@
 					<img id="logo" src="https://images.sftcdn.net/images/t_optimized,f_auto/p/4726ff4a-9b33-11e6-b705-00163ed833e7/1323208810/geemail-logo.png" alt="logo">
 			<div class="content">
 				<!-- <nav id="newMail">New Messages</nav> -->
+				<div id="counter"> Inbox </div>
+
 
 			</div>
 		</div>

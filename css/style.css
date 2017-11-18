@@ -1,4 +1,7 @@
 body {
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	color: black;
 	
 }
 
@@ -12,14 +15,32 @@ body {
 	width: auto px;
 	padding: 10px;
 	margin: 5px;
-}
+	font-size: 20px;
+	font-weight: bold;
+	
 
+}
 
 .emlSender:hover{
 	background-color: lightgrey;
+
+}
+
+.emlSubject {
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.emlDate {
+	font-size: 15px;
+	font-weight: normal;
 }
 
 .emlBody {
-	color: pink;
+	color: grey;
 	display: none;
+	font-size: 12px;
+}
+
+
 }
