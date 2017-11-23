@@ -19,6 +19,8 @@
     // Display the data from mail-generator.js
 			// console.log(window.geemails);
 			// insert forloop here
+	
+
 		for (var i = 0; i<window.geemails.length; i++){
 			// console.log(window.geemails[i]);
 			console.log(window.geemails[i].sender);
@@ -83,11 +85,92 @@
 
 	// Inbox counter
 
-		// var inboxCounter = window.geemails.length;
+		// console.log(window.geemails.length);
+		// console.log(window.geemails[0]);
+
+		// var inboxCounter = document.getElementById('counter');
+		// inboxCounter.innerHTML = 'Inbox' + '(' + window.geemails.length + ')';
+
+		function aNewMessage(){
+			console.log('is it working?');
+			var inboxCounter = document.getElementById('counter');
+			inboxCounter.innerHTML = 'Inbox' + ' (' + window.geemails.length++ + ')';
+
+		}
+
+		function createNewMessage(){
+			var compileMessage  = getNewMessage();
+
+			var newSender = document.createElement('div');
+			newSender.className = 'emlSender';
+			newSender.innerHTML = compileMessage.sender;
+			document.body.appendChild(newSender);
+
+			// figure out the CSS
+			var newSubject = document.createElement('div');
+			newSubject.className = 'emlSubject';
+			newSubject.innerHTML = compileMessage.subject;
+			newSender.appendChild(newSubject);
+
+			var newDate = document.createElement('div');
+			newDate.className = 'emlDate';
+			newDate.innerHTML = compileMessage.date;
+			newSender.appendChild(newDate);
+
+			var newBody = document.createElement('div');
+			newBody.className = 'emlBody';
+			newBody.innerHTML = compileMessage.body;
+			newSender.appendChild(newBody);
+		
+			console.log(getNewMessage());
+			// YOU MUST INVOKE THE FUNCTION!!!! HOW DO I DO THAT!!
+
+
+			// var myNewMessage = getNewMessage();
+			// console.log(myNewMessage);
+
+			// var pElem = document.createElement('p');
+			// pElem.innerHTML = createNewMessage.sender;
+			// document.body.appendChild(pElem);
+
+		}
+
+
+		// var subjectBox = document.createElement('div')l
+
+		setInterval(aNewMessage, 3000);
+		setInterval(createNewMessage, 3000);
+
+		// var myNewMessage = getNewMessage();
+		// console.log(myNewMessage);
+
+		// console.log(getNewMessage());
+
+		// var myNewMessage = getNewMessage();
+		// window.geemails.unshift(getNewMessage);
+
+		// var inboxCounter = windows.geemails.length;
 		// document.getElementbyId('counter').innerHTML = '(' + inboxCounter + ')';
 
+		//This is Vic's example
 
+		// console.log(getNewMessage());
+		// var myNewMessage = getNewMessage();
+		// console.log (myNewMessage);
+		// console.log (myNewMessage.sender);
+		// console.log (myNewMessage.subject);
 
+		// var h1Elem = document.createElement('h1');
+		// h1Elem.innerHTML = myNewMessage.sender;
+		// main.appendChild(h1Elem);
+
+		// var h1Elem = document.createElement('h1');
+		// h1Elem.innerHTML = myNewMessage.subject;
+		// main.appendChild(h1Elem);
+
+		// var h1Elem = document.createElement('h1');
+		// h1Elem.innerHTML = myNewMessage.sender;
+		// main.appendChild(h1Elem);
 
  	};
  
@@ -102,7 +185,7 @@
 					<img id="logo" src="https://images.sftcdn.net/images/t_optimized,f_auto/p/4726ff4a-9b33-11e6-b705-00163ed833e7/1323208810/geemail-logo.png" alt="logo">
 			<div class="content">
 				<!-- <nav id="newMail">New Messages</nav> -->
-				<div id="counter"> Inbox </div>
+				<div id="counter"> </div>
 
 
 			</div>

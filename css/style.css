@@ -8,7 +8,10 @@ body {
 .content {
 	border: 1px solid black;
 }
+#counter {
+	border: 1px solid blue;
 
+}
 .emlSender {
 	border: 1px solid red;
 	height: auto px;
