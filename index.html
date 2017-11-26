@@ -14,23 +14,21 @@
      window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-		
 
     // Display the data from mail-generator.js
-			// console.log(window.geemails);
-			// insert forloop here
-	
 
 		for (var i = 0; i<window.geemails.length; i++){
 			// console.log(window.geemails[i]);
-			console.log(window.geemails[i].sender);
-			console.log(window.geemails[i].subject);
-			console.log(window.geemails[i].date);
-			console.log(window.geemails[i].body);
+			// console.log(window.geemails[i].sender);
+			// console.log(window.geemails[i].subject);
+			// console.log(window.geemails[i].date);
+			// console.log(window.geemails[i].body);
 
 	        var senderBox = document.createElement('div');
 	        senderBox.className = 'emlSender';
 	        senderBox.innerHTML = geemails[i].sender;
+	        // senderBox.style.backgroundColor = lightgrey;
+	        senderBox.style.fontWeight = 'bold';
 	        document.body.appendChild(senderBox);
 
 	        var subjectBox = document.createElement('div');
@@ -46,42 +44,94 @@
 	        var bodyBox = document.createElement('div');
 	        bodyBox.className = 'emlBody';
 	        bodyBox.innerHTML = geemails[i].body;
+	        bodyBox.style.display = 'none';
 	        senderBox.appendChild(bodyBox);
-
 		}
 
-	// Click to show Body
+	// Click emlSender to show Body
 
-		var parentBox = document.getElementsByClassName('emlSender');
-		for (var i = 0; i<parentBox.length; i++){
-			parentBox[i].addEventListener('click', showBody);
-		}
+		// var parentBox = document.getElementsByClassName('emlSender');
+		// for (var i = 0; i<parentBox.length; i++){
+		// 	parentBox[i].addEventListener('click', showBody);
+		// }
 
-		function showBody(){
-			var bodyContent = this.querySelectorAll('.emlBody')[0];
-			if (bodyContent.style.display === 'none'){
-				bodyContent.style.display = 'block';
-			}else{
-				bodyContent.style.display = "none";
-			}
-			console.log('it works!');
-		}
+		// function showBody(){
+		// 	var bodyContent = this.querySelectorAll('.emlBody')[0];
+		// 	if (bodyContent.style.display === 'none'){
+		// 		bodyContent.style.display = 'block';
+		// 	}else{
+		// 		bodyContent.style.display = 'none';
+		// 	}
+		// 	// console.log('it works!');
+		// }
+
+	// CSS experiments - MouseOver
+
+		// var mouseIn = document.getElementsByClassName('emlSender');
+		// var mouseOff = document.getElementsByClassName('emlSender');
+
+		// for (var i = 0; i<mouseIn.length; i++){
+		// 	mouseIn[i].addEventListener('mouseover', mouseOver);
+		// }
+
+		// for (var i = 0; i<mouseIn.length; i++){
+		// 	mouseIn[i].addEventListener('mouseout', mousOut);
+
+		// function mouseOver(){
+		// 	var hoverColor = this.querySelectorAll('emlSender').style.backgroundColor = 'none';
+		// }
+
+		// function mouseOut(){
+		// 	var hoverColor2 = this.querySelectorAll('emlSender').style.backgroundColor = 'lightgrey';
+		// }
+
+		//Example mouseOver
+
+			// document.getElementById("demo").addEventListener("mouseover", mouseOver);
+			// document.getElementById("demo").addEventListener("mouseout", mouseOut);
+
+			// function mouseOver() {
+			//     document.getElementById("demo").style.color = "red";
+			// }
+
+			// function mouseOut() {
+			//     document.getElementById("demo").style.color = "black";
+
+		//Vic's JS Bin example
+
+			// title.addEventListener("click", showText);
+
+			// function showText(){
+			//   var pElem = document.createElement("p");
+			//   pElem.id = "brand";
+			//   pElem.innerHTML = "Where it's fun and games"
+			//   document.body.appendChild(pElem);
+	  
+			// }
+
+			// fire.addEventListener("click", showFame);
+
+			// function showFame(){
+			//   var divElem = document.createElement("div");
+			//   divElem.id = "famous";
+			//   divElem.innerHTML = "You a rockstar!";
+			//   document.body.appendChild(divElem);
 
 	// Unread emails are BOLDED; when clicked to display body, then the font returns to normal.
 
-		var readEmail = document.getElementsByClassName('emlSubject');
-		for (var i = 0; i<readEmail .length; i++){
-			readEmail [i].addEventListener('click', unBold);
-		}
+		// var readEmail = document.getElementsByClassName('emlSubject');
+		// for (var i = 0; i<readEmail .length; i++){
+		// 	readEmail [i].addEventListener('click', unBold);
+		// }
 
-		function unBold(){
-			var subjectRead = this.querySelectorAll('.emlSubject')[0];
-			if (readEmail.style.fontWeight === 'bold'){
-				readEmail.style.fontWeight = 'normal';
-			}else{
-				readEmail.style.fontWeight = 'bold';
-			}
-		}
+		// function unBold(){
+		// 	var subjectRead = this.querySelectorAll('.emlSubject')[0];
+		// 	if (readEmail.style.fontWeight === 'bold'){
+		// 		readEmail.style.fontWeight = 'normal';
+		// 	}else{
+		// 		readEmail.style.fontWeight = 'bold';
+		// 	}
+		// }
 
 	// Inbox counter
 
@@ -92,13 +142,14 @@
 		// inboxCounter.innerHTML = 'Inbox' + '(' + window.geemails.length + ')';
 
 		function aNewMessage(){
-			console.log('is it working?');
+			// console.log('is it working?');
 			var inboxCounter = document.getElementById('counter');
 			inboxCounter.innerHTML = 'Inbox' + ' (' + window.geemails.length++ + ')';
 
 		}
 
 		function createNewMessage(){
+
 			var compileMessage  = getNewMessage();
 
 			var newSender = document.createElement('div');
@@ -106,7 +157,6 @@
 			newSender.innerHTML = compileMessage.sender;
 			document.body.appendChild(newSender);
 
-			// figure out the CSS
 			var newSubject = document.createElement('div');
 			newSubject.className = 'emlSubject';
 			newSubject.innerHTML = compileMessage.subject;
@@ -120,57 +170,56 @@
 			var newBody = document.createElement('div');
 			newBody.className = 'emlBody';
 			newBody.innerHTML = compileMessage.body;
+			newBody.style.display = 'none';
 			newSender.appendChild(newBody);
 		
 			console.log(getNewMessage());
-			// YOU MUST INVOKE THE FUNCTION!!!! HOW DO I DO THAT!!
 
+			// Big Ol' hint
+				// var myNewMessage = getNewMessage();
+				// console.log(myNewMessage);
 
-			// var myNewMessage = getNewMessage();
-			// console.log(myNewMessage);
-
-			// var pElem = document.createElement('p');
-			// pElem.innerHTML = createNewMessage.sender;
-			// document.body.appendChild(pElem);
+				// var pElem = document.createElement('p');
+				// pElem.innerHTML = createNewMessage.sender;
+				// document.body.appendChild(pElem);
 
 		}
-
-
-		// var subjectBox = document.createElement('div')l
 
 		setInterval(aNewMessage, 3000);
 		setInterval(createNewMessage, 3000);
 
-		// var myNewMessage = getNewMessage();
-		// console.log(myNewMessage);
+	// Click to show new message body. This is with new var labels: 
+		// var newParentBox = document.getElementsByClassName('emlSender');
+		// for (var i = 0; i<newParentBox.length; i++){
+		// 	newParentBox[i].addEventListener('click', newShowBody);
+		// }
 
-		// console.log(getNewMessage());
+		// function newShowBody(){
+		// 	var newBodyContent = this.querySelectorAll('.emlBody');
+		// 	if (newBodyContent.style.display === 'none'){
+		// 		newBodyContent.style.display = 'block';
+		// 	}else{
+		// 		newBodyContent.style.display = 'none';
+		// 	}
+		// 	// console.log('it works!');
+		// }
 
-		// var myNewMessage = getNewMessage();
-		// window.geemails.unshift(getNewMessage);
+	var parentBox = document.getElementsByClassName('emlSender');
+		for (var i = 0; i<parentBox.length; i++){
+			parentBox[i].addEventListener('click', showBody);
+		}
 
-		// var inboxCounter = windows.geemails.length;
-		// document.getElementbyId('counter').innerHTML = '(' + inboxCounter + ')';
+		function showBody(){
+			var bodyContent = this.querySelectorAll('.emlBody')[0];
+			if (bodyContent.style.display === 'none'){
+				bodyContent.style.display = 'block';
+			}else{
+				bodyContent.style.display = 'none';
+			}
+			// console.log('it works!');
+		}
 
-		//This is Vic's example
 
-		// console.log(getNewMessage());
-		// var myNewMessage = getNewMessage();
-		// console.log (myNewMessage);
-		// console.log (myNewMessage.sender);
-		// console.log (myNewMessage.subject);
-
-		// var h1Elem = document.createElement('h1');
-		// h1Elem.innerHTML = myNewMessage.sender;
-		// main.appendChild(h1Elem);
-
-		// var h1Elem = document.createElement('h1');
-		// h1Elem.innerHTML = myNewMessage.subject;
-		// main.appendChild(h1Elem);
-
-		// var h1Elem = document.createElement('h1');
-		// h1Elem.innerHTML = myNewMessage.sender;
-		// main.appendChild(h1Elem);
 
  	};
  
@@ -183,12 +232,19 @@
 			<header id="intro">
 				<h1 id="name">gee.mail</h1>
 					<img id="logo" src="https://images.sftcdn.net/images/t_optimized,f_auto/p/4726ff4a-9b33-11e6-b705-00163ed833e7/1323208810/geemail-logo.png" alt="logo">
-			<div class="content">
-				<!-- <nav id="newMail">New Messages</nav> -->
-				<div id="counter"> </div>
+				</h1>
+			</header>
 
+			<nav id="content">
+				<ul>
+					<li id="counter">Inbox</li>
+					<li id="compose">Compose</li>
+					<li id="sent">Sent</li>
+					<li id="drafts">Drafts</li>
+				</ul>
 
-			</div>
+			</nav>
+
 		</div>
 
 		 <script src="js/mail-generator.js"></script>

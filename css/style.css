@@ -5,8 +5,11 @@ body {
 	
 }
 
-.content {
+#content {
 	border: 1px solid black;
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
 }
 #counter {
 	border: 1px solid blue;
@@ -18,31 +21,54 @@ body {
 	width: auto px;
 	padding: 10px;
 	margin: 5px;
-	font-size: 20px;
-	font-weight: bold;
+	/*font-size: 20px;*/
+/*	font-weight: bold;*/
+	display: inline-block;
+	/*vertical-align: top;*/
+	width: 75%;
+	margin-left: 170px;	
+    padding: 1em;
+    /*overflow: hidden;*/
 	
-
 }
 
-.emlSender:hover{
-	background-color: lightgrey;
+/*.emlSender: hover {
+	background-color: lightgrey;*/
 
 }
 
 .emlSubject {
-	font-size: 15px;
-	font-weight: normal;
+	/*font-size: 15px;*/
+	/*font-weight: normal;*/
+	display: inline-block;
+	/*align-items: 30%;*/
 }
 
 .emlDate {
-	font-size: 15px;
-	font-weight: normal;
+	/*font-size: 15px;*/
+	/*font-weight: normal;*/
+	display: inline-block;
 }
 
 .emlBody {
 	color: grey;
-	display: none;
-	font-size: 12px;
+	/*display: none;*/
+	/*font-size: 12px;*/
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
 }
 
 
