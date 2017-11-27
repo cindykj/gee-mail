@@ -1,21 +1,14 @@
 body {
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
-	color: black;
-	
 }
 
-#content {
-	border: 1px solid black;
-	display: inline-block;
-	vertical-align: top;
-	width: 25%;
-}
+
 #counter {
 	border: 1px solid blue;
 
 }
-.emlSender {
+.emlContainer {
 	border: 1px solid red;
 	height: auto px;
 	width: auto px;
@@ -29,11 +22,13 @@ body {
 	margin-left: 170px;	
     padding: 1em;
     /*overflow: hidden;*/
+/*    -webkit-column-span: all; 
+    column-span: all;*/
 	
 }
 
-/*.emlSender: hover {
-	background-color: lightgrey;*/
+.emlSender: hover {
+	background-color: lightgrey;
 
 }
 
@@ -57,10 +52,15 @@ body {
 }
 
 nav {
-    float: left;
+    border: 1px solid black;
+	/*display: inline-block;*/
+	/*vertical-align: top;*/
+	width: 25%;
+    /*float: left;*/
     max-width: 160px;
     margin: 0;
     padding: 1em;
+
 }
 nav ul {
     list-style-type: none;
