@@ -1,10 +1,13 @@
+
 body {
-	background-color: white;
 	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
 	margin-top: 80px;
+	font-size: 14px;
 }
 
 header {
+	/*border: 1px solid pink;*/
 	position: fixed;
   	top: 0;
 	left: 0;
@@ -19,98 +22,83 @@ header {
 #logo {
 	height: 50px;
 	margin: 10px;
-	/*vertical-align: auto;*/
 }
+
 #name {
-	border: 1px solid purple;
-	/*padding: 60px 0;*/
+	/*border: 1px solid purple;*/
+	font-family: 'Roboto Slab', serif;
+	margin-bottom: 20px;
 	display: inline-block;
-	/*margin-bottom: 30px;*/
-
-
-	/*margin-bottom: 30px;*/
-	/*vertical-align: auto;*/
+	position: absolute;
+	top: 0px;
 }
+
 #welcome {
-	border: 1px solid green;
+	/*border: 1px solid green;*/
 	display: inline-block;
-/*	margin-bottom: 30px;*/
 	position: absolute;
     right: 0px;
     width: 200px;
     padding: 10px;
-
-	/*vertical-align: auto;*/
 }
 
-#counter {
-	border: 1px solid blue;
-
-}
 .emlContainer {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	height: auto px;
-	max-width: 800px;
+	width: auto px;
+	max-width: 900px;
 	padding: 10px;
-	margin: 0 auto;
-	margin-left: 25%;
-	/*position: relative;*/
- 
+	margin: 5px;
+	margin-left: 25%; 
 }
 
-#main div {
-   -webkit-flex: 1; /* Safari 6.1+ */
-   flex: 1;
-}
 
 .emlContainer:hover{
 	background-color: lightgrey;
 }
 
 .emlSender {
-	border: 1px solid purple;
+	/*border: 1px solid purple;*/
 	display: inline-block;
-	margin-left: 20px;
-
+ 	width: 33%;
+ 	text-align: left;
 }
 
 
 .emlSubject {
-	border: 1px solid green;
+	/*border: 1px solid green;*/
 	display: inline-block;
-
+  	width: 33%;
+  	text-align: center;
 }
 
 .emlDate {
+	/*border: 1px solid orange;*/
 	display: inline-block;
-	/*margin-left: 50%;*/
+  	width: 33%;
+  	text-align: right;
 }
 
 .emlBody {
+	/*border: 1px solid coral;*/
 	color: grey;
 	margin-left: 20px;
 	font-size: 12px;
-	max-width: 800px;
-
+	font-weight: normal;
+	margin: 1em;
 }
 
 @media screen and (min-width:600px){
 	nav {
-	    border: 1px solid black;
+	    /*border: 1px solid black;*/
 	    position: fixed;
-		/*display: inline-block;*/
-		/*vertical-align: top;*/
-	    /*float: left;*/
 	    width: 25%;
-	    /*max-width: 160px;
-	    margin: 0;
-	    padding: 1em;*/
 	}
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 1em;
     margin-left: 20px;
 }
 
@@ -119,13 +107,3 @@ nav ul {
 		display: inline;
 }
 
-li {
-	padding: 1em;
-}
-/*
-nav ul a {
-    text-decoration: none;*/
-}
-
-
-}

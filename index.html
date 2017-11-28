@@ -6,7 +6,7 @@
 
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Slab" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet" media="screen">
 		<script src="js/mail-generator.js"></script>
 
@@ -31,8 +31,6 @@
 	        var senderBox = document.createElement('div');
 	        senderBox.className = 'emlSender';
 	        senderBox.innerHTML = geemails[i].sender;
-	        // senderBox.style.backgroundColor = lightgrey;
-	        senderBox.style.fontWeight = 'bold';
 	      	emailBox.appendChild(senderBox);
 
 	        var subjectBox = document.createElement('div');
@@ -112,22 +110,6 @@
 				// console.log('it works!');
 			}
 
-		
-		// Unread emails are BOLDED; when clicked to display body, then the font returns to normal.
-
-			// var readEmail = document.getElementsByClassName('emlContainer');
-			// for (var i = 0; i<readEmail.length; i++){
-			// 	readEmail [i].addEventListener('click', unBold);
-			// }
-
-			// function unBold(){
-			// 	var subjectRead = this.querySelectorAll('.emlContainer')[0];
-			// 	if (readEmail.style.fontWeight === 'bold'){
-			// 		readEmail.style.fontWeight = 'normal';
-			// 	}else{
-			// 		readEmail.style.fontWeight = 'bold';
-			// 	}
-			// }
 
 		}
 
@@ -143,7 +125,6 @@
 			<img id="logo" src="https://images.sftcdn.net/images/t_optimized,f_auto/p/4726ff4a-9b33-11e6-b705-00163ed833e7/1323208810/geemail-logo.png" alt="logo">
 			<h1 id="name">gee.mail</h1>
 			<div id="welcome">Hi, DevLeague Team!</div>
-			</h1>
 		</header>	
 		<nav id="content">
 			<ul>
