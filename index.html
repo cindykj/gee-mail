@@ -52,28 +52,6 @@
 	        emailBox.appendChild(bodyBox);
 		}
 
-	
-
-		//Vic's JS Bin example
-
-			// title.addEventListener("click", showText);
-
-			// function showText(){
-			//   var pElem = document.createElement("p");
-			//   pElem.id = "brand";
-			//   pElem.innerHTML = "Where it's fun and games"
-			//   document.body.appendChild(pElem);
-	  
-			// }
-
-			// fire.addEventListener("click", showFame);
-
-			// function showFame(){
-			//   var divElem = document.createElement("div");
-			//   divElem.id = "famous";
-			//   divElem.innerHTML = "You a rockstar!";
-			//   document.body.appendChild(divElem);
-
 	// Inbox counter
 
 		// console.log(window.geemails.length);
@@ -84,6 +62,8 @@
 			var inboxCounter = document.getElementById('counter');
 			inboxCounter.innerHTML = 'Inbox' + ' (' + window.geemails.length++ + ')';
 		}
+
+	// Generate new email
 
 		function createNewMessage(){
 
@@ -116,15 +96,6 @@
 		
 			console.log(getNewMessage());
 
-			// Big Ol' hint
-				// var myNewMessage = getNewMessage();
-				// console.log(myNewMessage);
-
-				// var pElem = document.createElement('p');
-				// pElem.innerHTML = createNewMessage.sender;
-				// document.body.appendChild(pElem);
-			
-
 	//Click to show Body
 			var parentBox = document.getElementsByClassName('emlContainer');
 			for (var i = 0; i<parentBox.length; i++){
@@ -141,68 +112,7 @@
 				// console.log('it works!');
 			}
 
-	// CSS experiments - MouseOver
-		//Attempt 1
-			// document.getElementsByClassName('emlContainer').addEventListener('mouseover', mouseOver);
-			// document.getElementsByClassName('emlContainer').addEventListener('mouseout', mouseOut);
-
-			// function mouseOver() {
-			//     document.getElementsByClassName('emlContainer').style.color = 'red';
-			// }
-
-			// function mouseOut() {
-			//     document.getElementsByClassName('emlContainer').style.color = 'black';
-			// }    
-
-		//Attempt 2
-			// var mouseIn = document.getElementsByClassName('emlContainer');
-			// for (var i = 0; i<mouseIn.length; i++){
-			// 	mouseIn[i].addEventListener('mouseover', mouseOver);
-			// }
-
-			// function mouseOver(){
-			// 	var hoverColor = this.querySelectorAll('.emlContainer')[0].style.backgroundColor = 'lightgrey';	
-			// }
-
-			// var mouseOff = document.getElementsByClassName('emlContainer');
-			// for (var i = 0; i<mouseOff.length; i++){
-			// 	mouseIn[i].addEventListener('mouseout', mouseOut);
-			// }
-
-			// function mouseOut(){
-			// 	var hoverColor2 = this.querySelectorAll('.emlContainer')[0].style.backgroundColor = 'white';
-			// }
 		
-		//Attempt 3
-
-			// document.getElementsByClassName('emlContainer').onmouseover = function() {mouseOver()};
-
-			// document.getElementsByClassName('emlContainer').onmouseout = function() {mouseOut()};
-
-			// function mouseOver() {
-			//     document.getElementsByClassName('emlContainer').style.color = 'red';
-			// }
-
-			// function mouseOut() {
-			//     document.getElementsByClassName('emlContainer').style.color = 'black';
-			// }
-
-		//Example mouseOver
-
-			// document.getElementById("demo").addEventListener("mouseover", mouseOver);
-			// document.getElementById("demo").addEventListener("mouseout", mouseOut);
-
-			// function mouseOver() {
-			//     document.getElementById("demo").style.color = "red";
-			// }
-
-			// function mouseOut() {
-			//     document.getElementById("demo").style.color = "black";
-
-
-
-		
-			
 		// Unread emails are BOLDED; when clicked to display body, then the font returns to normal.
 
 			// var readEmail = document.getElementsByClassName('emlContainer');
@@ -226,14 +136,13 @@
 
  	};
  
-
-
     </script>
 	</head>
 	<body>
 		<header id="intro">
+			<img id="logo" src="https://images.sftcdn.net/images/t_optimized,f_auto/p/4726ff4a-9b33-11e6-b705-00163ed833e7/1323208810/geemail-logo.png" alt="logo">
 			<h1 id="name">gee.mail</h1>
-				<img id="logo" src="https://images.sftcdn.net/images/t_optimized,f_auto/p/4726ff4a-9b33-11e6-b705-00163ed833e7/1323208810/geemail-logo.png" alt="logo">
+			<div id="welcome">Hi, DevLeague Team!</div>
 			</h1>
 		</header>	
 		<nav id="content">
