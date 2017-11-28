@@ -15,24 +15,27 @@ body {
 	padding: 10px;
 	margin: 5px;
 	/*font-size: 20px;*/
-/*	font-weight: bold;*/
-	display: inline-block;
+	/*font-weight: bold;
+	display: inline-block;*/
 	/*vertical-align: top;*/
-	width: 75%;
+	/*width: 75%;
 	margin-left: 170px;	
-    padding: 1em;
+    padding: 1em;*/*/*/*/
     /*overflow: hidden;*/
 /*    -webkit-column-span: all; 
-    column-span: all;*/
-	
+    column-span: all;*/	
+}
+.emlContainer:hover{
+	background-color: lightgrey;
 }
 
-.emlSender: hover {
+/*.emlSender: hover {
 	background-color: lightgrey;
 
-}
+}*/
 
 .emlSubject {
+	border: 1px solid green;
 	/*font-size: 15px;*/
 	/*font-weight: normal;*/
 	display: inline-block;
@@ -46,7 +49,7 @@ body {
 }
 
 .emlBody {
-	color: grey;
+	/*color: grey;*/
 	/*display: none;*/
 	/*font-size: 12px;*/
 }
@@ -55,20 +58,20 @@ nav {
     border: 1px solid black;
 	/*display: inline-block;*/
 	/*vertical-align: top;*/
-	width: 25%;
+/*	width: 25%;*/
     /*float: left;*/
-    max-width: 160px;
+    /*max-width: 160px;
     margin: 0;
-    padding: 1em;
+    padding: 1em;*/
 
 }
 nav ul {
-    list-style-type: none;
+    /*list-style-type: none;*/
     padding: 0;
 }
-
+/*
 nav ul a {
-    text-decoration: none;
+    text-decoration: none;*/
 }
 
 

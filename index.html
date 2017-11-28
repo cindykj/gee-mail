@@ -52,54 +52,7 @@
 	        emailBox.appendChild(bodyBox);
 		}
 
-	// Click emlSender to show Body
-
-		// var parentBox = document.getElementsByClassName('emlSender');
-		// for (var i = 0; i<parentBox.length; i++){
-		// 	parentBox[i].addEventListener('click', showBody);
-		// }
-
-		// function showBody(){
-		// 	var bodyContent = this.querySelectorAll('.emlBody')[0];
-		// 	if (bodyContent.style.display === 'none'){
-		// 		bodyContent.style.display = 'block';
-		// 	}else{
-		// 		bodyContent.style.display = 'none';
-		// 	}
-		// 	// console.log('it works!');
-		// }
-
-	// CSS experiments - MouseOver
-
-		// var mouseIn = document.getElementsByClassName('emlSender');
-		// var mouseOff = document.getElementsByClassName('emlSender');
-
-		// for (var i = 0; i<mouseIn.length; i++){
-		// 	mouseIn[i].addEventListener('mouseover', mouseOver);
-		// }
-
-		// for (var i = 0; i<mouseIn.length; i++){
-		// 	mouseIn[i].addEventListener('mouseout', mousOut);
-
-		// function mouseOver(){
-		// 	var hoverColor = this.querySelectorAll('emlSender').style.backgroundColor = 'none';
-		// }
-
-		// function mouseOut(){
-		// 	var hoverColor2 = this.querySelectorAll('emlSender').style.backgroundColor = 'lightgrey';
-		// }
-
-		//Example mouseOver
-
-			// document.getElementById("demo").addEventListener("mouseover", mouseOver);
-			// document.getElementById("demo").addEventListener("mouseout", mouseOut);
-
-			// function mouseOver() {
-			//     document.getElementById("demo").style.color = "red";
-			// }
-
-			// function mouseOut() {
-			//     document.getElementById("demo").style.color = "black";
+	
 
 		//Vic's JS Bin example
 
@@ -121,29 +74,10 @@
 			//   divElem.innerHTML = "You a rockstar!";
 			//   document.body.appendChild(divElem);
 
-	// Unread emails are BOLDED; when clicked to display body, then the font returns to normal.
-
-		// var readEmail = document.getElementsByClassName('emlSubject');
-		// for (var i = 0; i<readEmail .length; i++){
-		// 	readEmail [i].addEventListener('click', unBold);
-		// }
-
-		// function unBold(){
-		// 	var subjectRead = this.querySelectorAll('.emlSubject')[0];
-		// 	if (readEmail.style.fontWeight === 'bold'){
-		// 		readEmail.style.fontWeight = 'normal';
-		// 	}else{
-		// 		readEmail.style.fontWeight = 'bold';
-		// 	}
-		// }
-
 	// Inbox counter
 
 		// console.log(window.geemails.length);
 		// console.log(window.geemails[0]);
-
-		// var inboxCounter = document.getElementById('counter');
-		// inboxCounter.innerHTML = 'Inbox' + '(' + window.geemails.length + ')';
 
 		function aNewMessage(){
 			// console.log('is it working?');
@@ -189,6 +123,9 @@
 				// var pElem = document.createElement('p');
 				// pElem.innerHTML = createNewMessage.sender;
 				// document.body.appendChild(pElem);
+			
+
+	//Click to show Body
 			var parentBox = document.getElementsByClassName('emlContainer');
 			for (var i = 0; i<parentBox.length; i++){
 				parentBox[i].addEventListener('click', showBody);
@@ -204,30 +141,88 @@
 				// console.log('it works!');
 			}
 
+	// CSS experiments - MouseOver
+		//Attempt 1
+			// document.getElementsByClassName('emlContainer').addEventListener('mouseover', mouseOver);
+			// document.getElementsByClassName('emlContainer').addEventListener('mouseout', mouseOut);
+
+			// function mouseOver() {
+			//     document.getElementsByClassName('emlContainer').style.color = 'red';
+			// }
+
+			// function mouseOut() {
+			//     document.getElementsByClassName('emlContainer').style.color = 'black';
+			// }    
+
+		//Attempt 2
+			// var mouseIn = document.getElementsByClassName('emlContainer');
+			// for (var i = 0; i<mouseIn.length; i++){
+			// 	mouseIn[i].addEventListener('mouseover', mouseOver);
+			// }
+
+			// function mouseOver(){
+			// 	var hoverColor = this.querySelectorAll('.emlContainer')[0].style.backgroundColor = 'lightgrey';	
+			// }
+
+			// var mouseOff = document.getElementsByClassName('emlContainer');
+			// for (var i = 0; i<mouseOff.length; i++){
+			// 	mouseIn[i].addEventListener('mouseout', mouseOut);
+			// }
+
+			// function mouseOut(){
+			// 	var hoverColor2 = this.querySelectorAll('.emlContainer')[0].style.backgroundColor = 'white';
+			// }
+		
+		//Attempt 3
+
+			// document.getElementsByClassName('emlContainer').onmouseover = function() {mouseOver()};
+
+			// document.getElementsByClassName('emlContainer').onmouseout = function() {mouseOut()};
+
+			// function mouseOver() {
+			//     document.getElementsByClassName('emlContainer').style.color = 'red';
+			// }
+
+			// function mouseOut() {
+			//     document.getElementsByClassName('emlContainer').style.color = 'black';
+			// }
+
+		//Example mouseOver
+
+			// document.getElementById("demo").addEventListener("mouseover", mouseOver);
+			// document.getElementById("demo").addEventListener("mouseout", mouseOut);
+
+			// function mouseOver() {
+			//     document.getElementById("demo").style.color = "red";
+			// }
+
+			// function mouseOut() {
+			//     document.getElementById("demo").style.color = "black";
+
+
+
+		
+			
+		// Unread emails are BOLDED; when clicked to display body, then the font returns to normal.
+
+			// var readEmail = document.getElementsByClassName('emlContainer');
+			// for (var i = 0; i<readEmail.length; i++){
+			// 	readEmail [i].addEventListener('click', unBold);
+			// }
+
+			// function unBold(){
+			// 	var subjectRead = this.querySelectorAll('.emlContainer')[0];
+			// 	if (readEmail.style.fontWeight === 'bold'){
+			// 		readEmail.style.fontWeight = 'normal';
+			// 	}else{
+			// 		readEmail.style.fontWeight = 'bold';
+			// 	}
+			// }
+
 		}
 
 		setInterval(aNewMessage, 3000);
 		setInterval(createNewMessage, 3000);
-
-	// Click to show new message body. This is with new var labels: 
-		// var newParentBox = document.getElementsByClassName('emlSender');
-		// for (var i = 0; i<newParentBox.length; i++){
-		// 	newParentBox[i].addEventListener('click', newShowBody);
-		// }
-
-		// function newShowBody(){
-		// 	var newBodyContent = this.querySelectorAll('.emlBody');
-		// 	if (newBodyContent.style.display === 'none'){
-		// 		newBodyContent.style.display = 'block';
-		// 	}else{
-		// 		newBodyContent.style.display = 'none';
-		// 	}
-		// 	// console.log('it works!');
-		// }
-
-	
-
-
 
  	};
  
