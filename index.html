@@ -6,7 +6,7 @@
 
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Slab" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet" media="screen">
 		<script src="js/mail-generator.js"></script>
 
@@ -49,17 +49,17 @@
 	        bodyBox.style.display = 'none';
 	        emailBox.appendChild(bodyBox);
 		}
-
+	
 	// Inbox counter
 
 		// console.log(window.geemails.length);
 		// console.log(window.geemails[0]);
 
 		function aNewMessage(){
-			// console.log('is it working?');
 			var inboxCounter = document.getElementById('counter');
 			inboxCounter.innerHTML = 'Inbox' + ' (' + window.geemails.length++ + ')';
 		}
+		console.log(aNewMessage());
 
 	// Generate new email
 
@@ -95,6 +95,7 @@
 			console.log(getNewMessage());
 
 	//Click to show Body
+	
 			var parentBox = document.getElementsByClassName('emlContainer');
 			for (var i = 0; i<parentBox.length; i++){
 				parentBox[i].addEventListener('click', showBody);
@@ -107,11 +108,10 @@
 				}else{
 					bodyContent.style.display = 'none';
 				}
-				// console.log('it works!');
 			}
-
-
 		}
+
+	// Set interval to retrieve new messages
 
 		setInterval(aNewMessage, 3000);
 		setInterval(createNewMessage, 3000);
